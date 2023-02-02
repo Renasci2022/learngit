@@ -9,3 +9,8 @@
 - 查询状态
   - `git status`掌握工作区状态
   - `git diff note.md`查询修改内容
+- 版本回退
+  - `HEAD`指向的版本是当前版本
+  - `git log (--pretty=oneline)`显示由近及远的提交日志，确定要回退到哪个版本
+  - `git reflog`显示命令历史，确定要回溯到哪个版本
+  - `git reset --hard HEAD^^(or commit_id)`回溯两个版本（或到提交码指定版本）
