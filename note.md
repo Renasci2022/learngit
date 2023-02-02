@@ -6,3 +6,6 @@
   - `git add note.md`
   - `git commit -m "take some notes of git command"`
   - 可以多次`add`文件，一次`commit`
+- 查询状态
+  - `git status`查询整体状态
+  - `git diff note.md`查询修改内容
