@@ -1,0 +1,8 @@
+#### 一些指令
+- 创建一个仓库
+  - 移动到当前目录位置（```pwd```查看工作目录）
+  - `git init`
+- 添加文件到版本库
+  - `git add note.md`
+  - `git commit -m "take some notes of git command"`
+  - 可以多次`add`文件，一次`commit`
