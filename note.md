@@ -3,14 +3,26 @@
   - 移动到当前目录位置（```pwd```查看工作目录）
   - `git init`
 - 添加文件到版本库
-  - `git add note.md`
+  - `git add <file>`
   - `git commit -m "take some notes of git command"`
   - 可以多次`add`文件，一次`commit`
 - 查询状态
   - `git status`掌握工作区状态
-  - `git diff note.md`查询修改内容
+  - `git diff <file>`查询修改内容
 - 版本回退
   - `HEAD`指向的版本是当前版本
   - `git log (--pretty=oneline)`显示由近及远的提交日志，确定要回退到哪个版本
   - `git reflog`显示命令历史，确定要回溯到哪个版本
   - `git reset --hard HEAD^^(or commit_id)`回溯两个版本（或到提交码指定版本）
+- 撤销修改
+  - `git checkout -- <file>`丢弃工作区的修改
+  - `git reset HEAD <file>`撤销暂存区的修改
+- 文件删除
+  - `git remove`从版本库中删除文件，并`git commit`
+  - `git checkout -- <file>`恢复误删的文件，本质上是用版本库替换工作库
+#### 远程仓库
+- Git是分布式版本管理系统，因此需要一台设备充当服务器的角色，好在我们可以用GitHub充当远程仓库
+- 本地库和GitHub仓库之间的传输通过SSH加密，需要进行如下设置
+  - 创建SSH key`ssh-keygen -t rsa -C "youremail@example.com"`
+  - 在`.ssh`目录下的文件`id_rsa`是私钥，不能泄露，`id_ras.pub`是公钥
+  - 登陆GitHub，在设置中找到SSH页面，点击"Add SSH Key"，复制公钥中的内容
