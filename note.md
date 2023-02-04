@@ -19,7 +19,7 @@
   - `git reset HEAD <file>`撤销暂存区的修改
 - 文件删除
   - `git remove`从版本库中删除文件，并`git commit`
-  - `git checkout -- <file>`恢复误删的文件，本质上是用版本库替换工作库
+  - `git checkout -- <file>`恢复误删的文件，本质上是用版本库替换工作区
 #### 远程仓库
 - Git是分布式版本管理系统，因此需要一台设备充当服务器的角色，好在我们可以用GitHub充当远程仓库
 - 本地库和GitHub仓库之间的传输通过SSH加密，需要进行如下设置
