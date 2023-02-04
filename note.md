@@ -27,3 +27,10 @@
   - 在`.ssh`目录下的文件`id_rsa`是私钥，不能泄露，`id_ras.pub`是公钥
   - 在用户目录下可以找到密钥存放目录
   - 登陆GitHub，在设置中找到SSH页面，点击"Add SSH Key"，复制公钥中的内容
+- 添加远程库
+  - 在GitHub上建立新仓库（repositery），跟随GitHub的提示操作
+  - 在命令行中`git push -u origin master`进行第一次update，将两个仓库关联起来
+  - 后续只需要`git push origin master`
+- 取消关联远程库
+  - `git remote -v`查询关联的远程库
+  - `git remote rm origin`删除origin这个库
