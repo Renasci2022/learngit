@@ -25,4 +25,5 @@
 - 本地库和GitHub仓库之间的传输通过SSH加密，需要进行如下设置
   - 创建SSH key`ssh-keygen -t rsa -C "youremail@example.com"`
   - 在`.ssh`目录下的文件`id_rsa`是私钥，不能泄露，`id_ras.pub`是公钥
+  - 在用户目录下可以找到密钥存放目录
   - 登陆GitHub，在设置中找到SSH页面，点击"Add SSH Key"，复制公钥中的内容
